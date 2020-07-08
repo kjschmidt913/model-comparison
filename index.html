@@ -22,46 +22,50 @@
     <div class="container mt-3">
         <h1>Comparing ML Models</h1>
         <p>This application allows you to select ML models and parameters, and compare the results of each run.</p>
-    </div>
-    <div class="container border border-primary rounded col-7 p-3">
-        <h3 class="row ml-2">Model 1</h3>
-        <div class="form-group row ml-2">
-            <label for="models" class="pr-2">Model:</label>
-            <select class="form-control col-4" id="models">
-                <option value="RNN">RNN</option>
-                <option value="LSTM">LSTM</option>
-                <option value="CNN">CNN</option>
-            </select>
-        </div>
-        <div class="form-group row ml-2">
-            <p class="pr-2">Parameters: </p>
-            <input type="text" class="form-control col-2" id="learningRate" placeholder="Learning Rate">
-            <input type="text" class="form-control col-2 mx-1" id="batchSize" placeholder="Batch Size">
-            <input type="text" class="form-control col-2" id="momentum" placeholder="Momentum">
-            <input type="text" class="form-control col-2 mx-1" id="weight-decay" placeholder="Weight Decay">
-        </div>
-    </div>
 
-    <!-- Think about how to limit features. Maybe this is in the data upload process -->
-    <div class="container border border-primary rounded col-7 p-3 mt-2">
-        <h3 class="row ml-2">Model 2</h3>
-        <div class="form-group row ml-2">
-            <label for="models" class="pr-2">Model:</label>
-            <select class="form-control col-4" id="models">
-                <option value="RNN">RNN</option>
-                <option value="LSTM">LSTM</option>
-                <option value="CNN">CNN</option>
-            </select>
+        <div class="container border border-primary rounded col-9 p-3">
+            <h3 class="row ml-2">Model 1</h3>
+            <div class="form-group row ml-2">
+                <label for="models" class="pr-2">Model:</label>
+                <select class="form-control col-4" id="models">
+                    <option value="RNN">RNN</option>
+                    <option value="LSTM">LSTM</option>
+                    <option value="CNN">CNN</option>
+                </select>
+            </div>
+            <div class="form-group row ml-2">
+                <p class="pr-2">Parameters: </p>
+                <input type="text" class="form-control col-2" id="learningRate" placeholder="Learning Rate">
+                <input type="text" class="form-control col-2 mx-1" id="batchSize" placeholder="Batch Size">
+                <input type="text" class="form-control col-2" id="momentum" placeholder="Momentum">
+                <input type="text" class="form-control col-2 mx-1" id="weight-decay" placeholder="Weight Decay">
+            </div>
         </div>
-        <div class="form-group row ml-2">
-            <p class="pr-2">Parameters: </p>
-            <input type="text" class="form-control col-2" id="learningRate" placeholder="Learning Rate">
-            <input type="text" class="form-control col-2 mx-1" id="batchSize" placeholder="Batch Size">
-            <input type="text" class="form-control col-2" id="momentum" placeholder="Momentum">
-            <input type="text" class="form-control col-2 mx-1" id="weight-decay" placeholder="Weight Decay">
+
+        <!-- Think about how to limit features. Maybe this is in the data upload process -->
+        <div class="container border border-primary rounded col-9 p-3 mt-2">
+            <h3 class="row ml-2">Model 2</h3>
+            <div class="form-group row ml-2">
+                <label for="models" class="pr-2">Model:</label>
+                <select class="form-control col-4" id="models">
+                    <option value="RNN">RNN</option>
+                    <option value="LSTM">LSTM</option>
+                    <option value="CNN">CNN</option>
+                </select>
+            </div>
+            <div class="form-group row ml-2">
+                <p class="pr-2">Parameters: </p>
+                <input type="text" class="form-control col-2" id="learningRate" placeholder="Learning Rate">
+                <input type="text" class="form-control col-2 mx-1" id="batchSize" placeholder="Batch Size">
+                <input type="text" class="form-control col-2" id="momentum" placeholder="Momentum">
+                <input type="text" class="form-control col-2 mx-1" id="weight-decay" placeholder="Weight Decay">
+            </div>
+        </div>
+
+        <div class="text-right col-9 mx-auto px-0 pt-2">
+            <button class="btn btn-primary">Load Models</button>
         </div>
     </div>
-
 
 </body>
 
