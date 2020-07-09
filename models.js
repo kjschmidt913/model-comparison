@@ -14,3 +14,5 @@ model.fit(xs, ys, { epochs: 10 }).then(() => {
     model.predict(tf.tensor2d([5], [1, 1])).print();
     // Open the browser devtools to see the output
 });
+
+tfvis.visor()
