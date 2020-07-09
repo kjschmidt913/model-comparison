@@ -15,23 +15,23 @@ model.fit(xs, ys, { epochs: 10 }).then(() => {
     // Open the browser devtools to see the output
 });
 
-{
-    visorInstance = tfvis.visor();
-    visorInstance.surface({
-        name: 'Surface 1'
-    });
-    visorInstance.surface({
-        name: 'Surface 2'
-    });
-    visorInstance.surface({
-        name: 'Surface 3',
-        tab: 'Tab 2'
-    });
-    visorInstance.surface({
-        name: 'Just a surface',
-        tab: 'A really long tab name'
-    });
-}
+// {
+//     visorInstance = tfvis.visor();
+//     visorInstance.surface({
+//         name: 'Surface 1'
+//     });
+//     visorInstance.surface({
+//         name: 'Surface 2'
+//     });
+//     visorInstance.surface({
+//         name: 'Surface 3',
+//         tab: 'Tab 2'
+//     });
+//     visorInstance.surface({
+//         name: 'Just a surface',
+//         tab: 'A really long tab name'
+//     });
+// }
 
 
 {
@@ -39,21 +39,46 @@ model.fit(xs, ys, { epochs: 10 }).then(() => {
     const values = [
         [1, 2, 3],
         ['4', '5', '6'],
-        ['strong>7</strong>', true, false]
-    ]; // Render to visor
+        ['<strong>7</strong>', true, false]
+    ];
 
-    const surface = {
-        name: 'Table',
-        tab: 'Charts'
-    };
-    tfvis.render.table(surface, {
-        headers,
-        values
-    }); // Render to page
+    // Render to visor
+    // const surface = {
+    //     name: 'Table',
+    //     tab: 'Charts'
+    // };
+    // tfvis.render.table(surface, {
+    //     headers,
+    //     values
+    // });
 
+    // Render to page
     const container = document.getElementById('table-cont');
     tfvis.render.table(container, {
         headers,
         values
     });
+}
+
+{
+    const series1 = Array(100).fill(0).map(y => Math.random() * 100 - Math.random() * 50).map((y, x) => ({
+        x,
+        y
+    }));
+    const series2 = Array(100).fill(0).map(y => Math.random() * 100 - Math.random() * 150).map((y, x) => ({
+        x,
+        y
+    }));
+    const series = ['First', 'Second'];
+    const data = {
+        values: [series1, series2],
+        series
+    };
+    const opts = {
+        seriesColors: ['tomato', 'purple']
+    };
+
+    // Render to page
+    const container = document.getElementById('linechart-colors-cont');
+    tfvis.render.linechart(container, data, opts);
 }
